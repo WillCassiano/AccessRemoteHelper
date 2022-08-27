@@ -1,51 +1,33 @@
-﻿using Microsoft.Data.Sqlite;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using AccessRemoteHelper.Assets;
+using AccessRemoteHelper.Data;
+using AccessRemoteHelper.Models;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace AccessRemoteHelper
 {
     public partial class Acessos : Form
     {
-        private readonly Main _main;
-        private DataView _data;
+        private DataView _dataView;
+        private readonly IAplicativoRemoto _aplicativoRemoto;
+        private readonly IApplicationDb _applicationDb;
 
-        public Acessos(Main main)
+        public Acessos()
         {
             InitializeComponent();
-            _main = main;
+            _aplicativoRemoto = new AplicativoRemoto();
+            _applicationDb = new ApplicationDb();
         }
-        private void ListarAcessos()
-        {
-            using (var connection = new SqliteConnection("Data Source=contatos.db"))
-            {
-                connection.Open();
 
-                var command = connection.CreateCommand();
-                command.CommandText = "SELECT AC.DATA, CT.CONTATO, AC.ID, AC.PASSWORD, AC.TIPO FROM ACESSOS AC LEFT JOIN CONTATOS CT ON AC.ID = CT.ID ORDER BY AC.DATA DESC";
-
-                var reader = command.ExecuteReader();
-
-                DataTable dt = new DataTable();
-                dt.Load(reader);
-
-                connection.Close();
-
-                _data = new DataView(dt);
-
-                dtGridAcessos.DataSource = _data;
-            }
-        }
 
         private void Acessos_Load(object sender, EventArgs e)
         {
             ListarAcessos();
+        }
+
+        private void ListarAcessos()
+        {
+            _dataView = new DataView(_applicationDb.ListarAcessos());
+            dtGridAcessos.DataSource = _dataView;
         }
 
         private void dtGridAcessos_DoubleClick(object sender, EventArgs e)
@@ -61,7 +43,7 @@ namespace AccessRemoteHelper
             var password = dtGridAcessos.SelectedRows[0].Cells["Password"].Value as string;
             var tipo = dtGridAcessos.SelectedRows[0].Cells["Tipo"].Value as string;
 
-            _main.Conectar(id, (TipoAcesso)Enum.Parse(typeof(TipoAcesso), tipo), password);
+            _aplicativoRemoto.Conectar(id, password, (TipoAcesso)Enum.Parse(typeof(TipoAcesso), tipo));
         }
 
         private void adicinonarContatoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -77,14 +59,12 @@ namespace AccessRemoteHelper
             var tipo = dtGridAcessos.SelectedRows[0].Cells["Tipo"].Value as string;
 
             ContatosCadastro contatosCadastro = new ContatosCadastro("", id, tipo, password, false);
-
             contatosCadastro.ShowDialog();
-
         }
 
         private void txtPesquisa_TextChanged(object sender, EventArgs e)
         {
-            _data.RowFilter = $"Contato like '*{txtPesquisa.Text}*' OR " +
+            _dataView.RowFilter = $"Contato like '*{txtPesquisa.Text}*' OR " +
                               $"Id like '*{txtPesquisa.Text}*'";
         }
 
@@ -92,8 +72,10 @@ namespace AccessRemoteHelper
         {
             if (e.KeyCode == Keys.Down)
                 NextRow();
+
             if (e.KeyCode == Keys.Up)
                 PreviousRow();
+
             if (e.KeyCode == Keys.Enter)
             {
                 if (MessageBox.Show("Você irá se conectar a este contato, deseja continuar?", "Confirmação de acesso", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -107,7 +89,7 @@ namespace AccessRemoteHelper
         {
             var index = dtGridAcessos.SelectedRows[0].Index;
 
-            if (index < dtGridAcessos.Rows.Count -1)
+            if (index < dtGridAcessos.Rows.Count - 1)
             {
                 dtGridAcessos.Rows[index].Selected = false;
                 dtGridAcessos.Rows[++index].Selected = true;
