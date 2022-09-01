@@ -87,6 +87,9 @@
             this.dtGridContatos.AllowUserToAddRows = false;
             this.dtGridContatos.AllowUserToDeleteRows = false;
             this.dtGridContatos.AllowUserToResizeRows = false;
+            this.dtGridContatos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dtGridContatos.BackgroundColor = System.Drawing.Color.White;
             this.dtGridContatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtGridContatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {

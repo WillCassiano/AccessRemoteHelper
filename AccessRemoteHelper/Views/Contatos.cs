@@ -81,7 +81,7 @@ namespace AccessRemoteHelper
 
         private void txtPesquisa_TextChanged(object sender, EventArgs e)
         {
-            _dataView.RowFilter = $"Contato like '*{txtPesquisa.Text}*' OR " +
+            _dataView.RowFilter = $"nome like '*{txtPesquisa.Text}*' OR " +
                                   $"Id like '*{txtPesquisa.Text}*'";
         }
 
