@@ -1,6 +1,7 @@
 using AccessRemoteHelper.Assets;
 using AccessRemoteHelper.Data;
 using AccessRemoteHelper.Models;
+using AccessRemoteHelper.Views;
 using Microsoft.Data.Sqlite;
 using System.Diagnostics;
 using System.Security.Cryptography;
@@ -12,6 +13,7 @@ namespace AccessRemoteHelper
         private readonly Contatos _contatos;
         private readonly IAplicativoRemoto _aplicativoRemoto;
         private readonly IApplicationDb _applicationDb;
+        private bool OpenWithReaderText = false;
         public Main()
         {
             InitializeComponent();
@@ -66,7 +68,7 @@ namespace AccessRemoteHelper
             contatosCadastro.ShowDialog();
 
             _contatos.ListarContatos();
-        }        
+        }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
@@ -78,8 +80,19 @@ namespace AccessRemoteHelper
         {
             if (e.KeyCode == Keys.Enter)
                 SendKeys.Send("{tab}");
+
+            if (e.KeyCode == Keys.F1)
+            {
+                OpenWithReaderText = !OpenWithReaderText;
+                lblModoLeitura.Visible = OpenWithReaderText;
+            };
+
         }
 
-       
+        private void picScanner_Click(object sender, EventArgs e)
+        {
+            Scanner scanner = new Scanner(txtClienteId, OpenWithReaderText);
+            scanner.Show();
+        }
     }
 }

@@ -29,235 +29,264 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtClienteId = new System.Windows.Forms.TextBox();
-            this.btnTeamViewer = new System.Windows.Forms.Button();
-            this.btnAnyDesk = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.picStar = new System.Windows.Forms.PictureBox();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.btnRdp = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picStar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            this.SuspendLayout();
+            pictureBox1 = new PictureBox();
+            pictureBox2 = new PictureBox();
+            label1 = new Label();
+            txtClienteId = new TextBox();
+            btnTeamViewer = new Button();
+            btnAnyDesk = new Button();
+            pictureBox3 = new PictureBox();
+            label2 = new Label();
+            picStar = new PictureBox();
+            txtPassword = new TextBox();
+            label3 = new Label();
+            pictureBox4 = new PictureBox();
+            label4 = new Label();
+            pictureBox5 = new PictureBox();
+            btnRdp = new Button();
+            picScanner = new PictureBox();
+            lblModoLeitura = new Label();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picStar).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picScanner).BeginInit();
+            SuspendLayout();
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::AccessRemoteHelper.Properties.Resources.teamviewer_ico_128x128;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(57, 51);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            pictureBox1.Image = Properties.Resources.teamviewer_ico_128x128;
+            pictureBox1.Location = new Point(12, 12);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(57, 51);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::AccessRemoteHelper.Properties.Resources.anydesk_ico_128x128;
-            this.pictureBox2.Location = new System.Drawing.Point(98, 12);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(57, 51);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
+            pictureBox2.Image = Properties.Resources.anydesk_ico_128x128;
+            pictureBox2.Location = new Point(98, 12);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(57, 51);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 1;
+            pictureBox2.TabStop = false;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 82);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 15);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "ID do cliente";
+            label1.AutoSize = true;
+            label1.Location = new Point(12, 82);
+            label1.Name = "label1";
+            label1.Size = new Size(73, 15);
+            label1.TabIndex = 2;
+            label1.Text = "ID do cliente";
             // 
             // txtClienteId
             // 
-            this.txtClienteId.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtClienteId.Location = new System.Drawing.Point(12, 100);
-            this.txtClienteId.MaxLength = 50;
-            this.txtClienteId.Name = "txtClienteId";
-            this.txtClienteId.Size = new System.Drawing.Size(229, 32);
-            this.txtClienteId.TabIndex = 0;
-            this.txtClienteId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            txtClienteId.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            txtClienteId.Location = new Point(12, 100);
+            txtClienteId.MaxLength = 50;
+            txtClienteId.Name = "txtClienteId";
+            txtClienteId.Size = new Size(229, 32);
+            txtClienteId.TabIndex = 0;
+            txtClienteId.TextAlign = HorizontalAlignment.Center;
             // 
             // btnTeamViewer
             // 
-            this.btnTeamViewer.BackColor = System.Drawing.Color.SkyBlue;
-            this.btnTeamViewer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnTeamViewer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTeamViewer.Font = new System.Drawing.Font("Cascadia Code", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnTeamViewer.Location = new System.Drawing.Point(12, 193);
-            this.btnTeamViewer.Name = "btnTeamViewer";
-            this.btnTeamViewer.Size = new System.Drawing.Size(73, 30);
-            this.btnTeamViewer.TabIndex = 2;
-            this.btnTeamViewer.Text = "TV";
-            this.btnTeamViewer.UseVisualStyleBackColor = false;
-            this.btnTeamViewer.Click += new System.EventHandler(this.btnTeamViewer_Click);
+            btnTeamViewer.BackColor = Color.SkyBlue;
+            btnTeamViewer.BackgroundImageLayout = ImageLayout.Zoom;
+            btnTeamViewer.FlatStyle = FlatStyle.Flat;
+            btnTeamViewer.Font = new Font("Cascadia Code", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnTeamViewer.Location = new Point(12, 193);
+            btnTeamViewer.Name = "btnTeamViewer";
+            btnTeamViewer.Size = new Size(73, 30);
+            btnTeamViewer.TabIndex = 2;
+            btnTeamViewer.Text = "TV";
+            btnTeamViewer.UseVisualStyleBackColor = false;
+            btnTeamViewer.Click += btnTeamViewer_Click;
             // 
             // btnAnyDesk
             // 
-            this.btnAnyDesk.BackColor = System.Drawing.Color.IndianRed;
-            this.btnAnyDesk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnAnyDesk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAnyDesk.Font = new System.Drawing.Font("Cascadia Code", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnAnyDesk.Location = new System.Drawing.Point(90, 193);
-            this.btnAnyDesk.Name = "btnAnyDesk";
-            this.btnAnyDesk.Size = new System.Drawing.Size(73, 30);
-            this.btnAnyDesk.TabIndex = 3;
-            this.btnAnyDesk.Text = "Any";
-            this.btnAnyDesk.UseVisualStyleBackColor = false;
-            this.btnAnyDesk.Click += new System.EventHandler(this.btnAnyDesk_Click);
+            btnAnyDesk.BackColor = Color.IndianRed;
+            btnAnyDesk.BackgroundImageLayout = ImageLayout.Zoom;
+            btnAnyDesk.FlatStyle = FlatStyle.Flat;
+            btnAnyDesk.Font = new Font("Cascadia Code", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnAnyDesk.Location = new Point(90, 193);
+            btnAnyDesk.Name = "btnAnyDesk";
+            btnAnyDesk.Size = new Size(73, 30);
+            btnAnyDesk.TabIndex = 3;
+            btnAnyDesk.Text = "Any";
+            btnAnyDesk.UseVisualStyleBackColor = false;
+            btnAnyDesk.Click += btnAnyDesk_Click;
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Image = global::AccessRemoteHelper.Properties.Resources.VisualEditor___Icon___Menu_svg;
-            this.pictureBox3.Location = new System.Drawing.Point(217, 73);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 6;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            pictureBox3.Cursor = Cursors.Hand;
+            pictureBox3.Image = Properties.Resources.VisualEditor___Icon___Menu_svg;
+            pictureBox3.Location = new Point(217, 73);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(24, 24);
+            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox3.TabIndex = 6;
+            pictureBox3.TabStop = false;
+            pictureBox3.Click += pictureBox3_Click;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label2.Location = new System.Drawing.Point(181, 78);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 15);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Salvos";
+            label2.AutoSize = true;
+            label2.ForeColor = SystemColors.GrayText;
+            label2.Location = new Point(181, 78);
+            label2.Name = "label2";
+            label2.Size = new Size(40, 15);
+            label2.TabIndex = 7;
+            label2.Text = "Salvos";
             // 
             // picStar
             // 
-            this.picStar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picStar.Image = global::AccessRemoteHelper.Properties.Resources.star_line_yellow_icon;
-            this.picStar.Location = new System.Drawing.Point(214, 104);
-            this.picStar.Name = "picStar";
-            this.picStar.Size = new System.Drawing.Size(24, 24);
-            this.picStar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picStar.TabIndex = 8;
-            this.picStar.TabStop = false;
-            this.picStar.Click += new System.EventHandler(this.picStar_Click);
+            picStar.Cursor = Cursors.Hand;
+            picStar.Image = Properties.Resources.star_line_yellow_icon;
+            picStar.Location = new Point(214, 104);
+            picStar.Name = "picStar";
+            picStar.Size = new Size(24, 24);
+            picStar.SizeMode = PictureBoxSizeMode.StretchImage;
+            picStar.TabIndex = 8;
+            picStar.TabStop = false;
+            picStar.Click += picStar_Click;
             // 
             // txtPassword
             // 
-            this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtPassword.Location = new System.Drawing.Point(12, 155);
-            this.txtPassword.MaxLength = 50;
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(229, 32);
-            this.txtPassword.TabIndex = 1;
-            this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            txtPassword.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            txtPassword.Location = new Point(12, 155);
+            txtPassword.MaxLength = 50;
+            txtPassword.Name = "txtPassword";
+            txtPassword.Size = new Size(229, 32);
+            txtPassword.TabIndex = 1;
+            txtPassword.TextAlign = HorizontalAlignment.Center;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 137);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 15);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Password";
+            label3.AutoSize = true;
+            label3.Location = new Point(12, 137);
+            label3.Name = "label3";
+            label3.Size = new Size(57, 15);
+            label3.TabIndex = 10;
+            label3.Text = "Password";
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox4.Image = global::AccessRemoteHelper.Properties.Resources.registry;
-            this.pictureBox4.Location = new System.Drawing.Point(148, 73);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 11;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            pictureBox4.Cursor = Cursors.Hand;
+            pictureBox4.Image = Properties.Resources.registry;
+            pictureBox4.Location = new Point(148, 73);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(24, 24);
+            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox4.TabIndex = 11;
+            pictureBox4.TabStop = false;
+            pictureBox4.Click += pictureBox4_Click;
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label4.Location = new System.Drawing.Point(124, 78);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(27, 15);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Log";
+            label4.AutoSize = true;
+            label4.ForeColor = SystemColors.GrayText;
+            label4.Location = new Point(124, 78);
+            label4.Name = "label4";
+            label4.Size = new Size(27, 15);
+            label4.TabIndex = 12;
+            label4.Text = "Log";
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Image = global::AccessRemoteHelper.Properties.Resources.rdp_icon1;
-            this.pictureBox5.Location = new System.Drawing.Point(184, 12);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(57, 51);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 13;
-            this.pictureBox5.TabStop = false;
+            pictureBox5.Image = Properties.Resources.rdp_icon1;
+            pictureBox5.Location = new Point(184, 12);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(57, 51);
+            pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox5.TabIndex = 13;
+            pictureBox5.TabStop = false;
             // 
             // btnRdp
             // 
-            this.btnRdp.BackColor = System.Drawing.Color.Gainsboro;
-            this.btnRdp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnRdp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRdp.Font = new System.Drawing.Font("Cascadia Code", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnRdp.Location = new System.Drawing.Point(168, 193);
-            this.btnRdp.Name = "btnRdp";
-            this.btnRdp.Size = new System.Drawing.Size(73, 30);
-            this.btnRdp.TabIndex = 14;
-            this.btnRdp.Text = "RDP";
-            this.btnRdp.UseVisualStyleBackColor = false;
-            this.btnRdp.Click += new System.EventHandler(this.btnRdp_Click);
+            btnRdp.BackColor = Color.Gainsboro;
+            btnRdp.BackgroundImageLayout = ImageLayout.Zoom;
+            btnRdp.FlatStyle = FlatStyle.Flat;
+            btnRdp.Font = new Font("Cascadia Code", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnRdp.Location = new Point(168, 193);
+            btnRdp.Name = "btnRdp";
+            btnRdp.Size = new Size(73, 30);
+            btnRdp.TabIndex = 14;
+            btnRdp.Text = "RDP";
+            btnRdp.UseVisualStyleBackColor = false;
+            btnRdp.Click += btnRdp_Click;
+            // 
+            // picScanner
+            // 
+            picScanner.Cursor = Cursors.Hand;
+            picScanner.Image = (Image)resources.GetObject("picScanner.Image");
+            picScanner.Location = new Point(94, 73);
+            picScanner.Name = "picScanner";
+            picScanner.Size = new Size(24, 24);
+            picScanner.SizeMode = PictureBoxSizeMode.StretchImage;
+            picScanner.TabIndex = 15;
+            picScanner.TabStop = false;
+            picScanner.Click += picScanner_Click;
+            // 
+            // lblModoLeitura
+            // 
+            lblModoLeitura.AutoSize = true;
+            lblModoLeitura.Font = new Font("Segoe UI", 8F, FontStyle.Italic, GraphicsUnit.Point);
+            lblModoLeitura.ForeColor = Color.FromArgb(255, 128, 0);
+            lblModoLeitura.Location = new Point(12, 66);
+            lblModoLeitura.Name = "lblModoLeitura";
+            lblModoLeitura.Size = new Size(74, 13);
+            lblModoLeitura.TabIndex = 16;
+            lblModoLeitura.Text = "[Modo leitura]";
+            lblModoLeitura.Visible = false;
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(253, 231);
-            this.Controls.Add(this.btnRdp);
-            this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.picStar);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.btnAnyDesk);
-            this.Controls.Add(this.btnTeamViewer);
-            this.Controls.Add(this.txtClienteId);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label2);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.KeyPreview = true;
-            this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(269, 270);
-            this.MinimumSize = new System.Drawing.Size(269, 270);
-            this.Name = "Main";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Access Remote Helper";
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Main_KeyDown);
-            this.Move += new System.EventHandler(this.Form1_Move);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picStar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
+            ClientSize = new Size(253, 231);
+            Controls.Add(lblModoLeitura);
+            Controls.Add(picScanner);
+            Controls.Add(btnRdp);
+            Controls.Add(pictureBox5);
+            Controls.Add(pictureBox4);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(txtPassword);
+            Controls.Add(picStar);
+            Controls.Add(pictureBox3);
+            Controls.Add(btnAnyDesk);
+            Controls.Add(btnTeamViewer);
+            Controls.Add(txtClienteId);
+            Controls.Add(label1);
+            Controls.Add(pictureBox2);
+            Controls.Add(pictureBox1);
+            Controls.Add(label2);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            KeyPreview = true;
+            MaximizeBox = false;
+            MaximumSize = new Size(269, 270);
+            MinimumSize = new Size(269, 270);
+            Name = "Main";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Access Remote Helper";
+            KeyDown += Main_KeyDown;
+            Move += Form1_Move;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picStar).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picScanner).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -277,5 +306,7 @@
         private Label label4;
         private PictureBox pictureBox5;
         private Button btnRdp;
+        private PictureBox picScanner;
+        private Label lblModoLeitura;
     }
 }

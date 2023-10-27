@@ -14,7 +14,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="IronOcr" Version="2023.1.11644" />
     <PackageReference Include="Microsoft.Data.Sqlite" Version="7.0.0-preview.7.22376.2" />
+    <PackageReference Include="Tesseract.Net.SDK" Version="4.5.411" />
   </ItemGroup>
 
   <ItemGroup>
@@ -30,6 +32,58 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="tessdata\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="C:\Users\Willian\.nuget\packages\tesseract.net.sdk\4.5.411\build\x64\tesseract.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="C:\Users\Willian\.nuget\packages\tesseract.net.sdk\4.5.411\build\x86\Tesseract.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="C:\Users\Willian\.nuget\packages\tesseract.net.sdk\4.5.411\build\..\content\tessdata\configs\config.cfg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="C:\Users\Willian\.nuget\packages\tesseract.net.sdk\4.5.411\build\..\content\tessdata\eng.traineddata">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="C:\Users\Willian\.nuget\packages\tesseract.net.sdk\4.5.411\build\..\content\tessdata\equ.traineddata">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="C:\Users\Willian\.nuget\packages\tesseract.net.sdk\4.5.411\build\..\content\tessdata\osd.traineddata">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="C:\Users\Willian\.nuget\packages\tesseract.net.sdk\4.5.411\build\..\content\tessdata\pdf.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="C:\Users\Willian\.nuget\packages\tesseract.net.sdk\4.5.411\build\..\content\tessdata\pdf.ttx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
