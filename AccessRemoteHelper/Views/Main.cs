@@ -94,5 +94,10 @@ namespace AccessRemoteHelper
             Scanner scanner = new Scanner(txtClienteId, OpenWithReaderText);
             scanner.Show();
         }
+
+        private void btnUltra_Click(object sender, EventArgs e)
+        {
+            _aplicativoRemoto.Conectar(txtClienteId.Text, txtPassword.Text, TipoAcesso.UltraViewer);
+        }
     }
 }

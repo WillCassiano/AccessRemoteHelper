@@ -27,7 +27,7 @@ namespace AccessRemoteHelper.Assets
         {
             id = id.Replace(" ", "").Trim();
 
-            if (id.Length < 9) return;
+            if (id.Length < 8) return;
 
             ProcessStartInfo processStartInfo = new ProcessStartInfo();
             processStartInfo.UseShellExecute = false;
@@ -50,6 +50,12 @@ namespace AccessRemoteHelper.Assets
                 case TipoAcesso.Rdp:
                     processStartInfo.FileName = @"mstsc";
                     processStartInfo.Arguments = $"/v:{id}";
+                    break;
+                case TipoAcesso.UltraViewer:
+                    processStartInfo.FileName = @"C:\Program Files (x86)\UltraViewer\UltraViewer_Desktop.exe";
+                    processStartInfo.Arguments = $"-i:{id}";
+                    if (!string.IsNullOrEmpty(password))
+                        processStartInfo.Arguments += $" -p:{password.Trim()}";
                     break;
                 default:
                     break;

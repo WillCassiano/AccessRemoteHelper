@@ -10,6 +10,7 @@ namespace AccessRemoteHelper.Models
     {
         TeamViewer,
         Anydesk,
-        Rdp
+        Rdp,
+        UltraViewer
     }
 }
