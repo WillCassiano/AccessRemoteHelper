@@ -3,6 +3,7 @@ using AccessRemoteHelper.Data;
 using AccessRemoteHelper.Models;
 using AccessRemoteHelper.Views;
 using Microsoft.Data.Sqlite;
+using System.Data;
 using System.Diagnostics;
 using System.Security.Cryptography;
 
@@ -98,6 +99,37 @@ namespace AccessRemoteHelper
         private void btnUltra_Click(object sender, EventArgs e)
         {
             _aplicativoRemoto.Conectar(txtClienteId.Text, txtPassword.Text, TipoAcesso.UltraViewer);
+        }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+
+            var source = new AutoCompleteStringCollection();
+            source.AddRange(_applicationDb.ListarAcessos()
+                .AsEnumerable()
+                .Select(x => new { Id = x["Id"].ToString(), Tipo = x["Tipo"].ToString(), DataHora = Convert.ToDateTime(x["Data"]) })                
+                .GroupBy(c => (c.Id, c.Tipo))      
+                .Select(x => new { x.Key.Id, x.Key.Tipo, Tempo = DateTime.Now - x.Max(g => g.DataHora) })
+                .OrderBy(x => x.Tempo)
+                .Select(c =>
+                    $"{c.Id.PadRight(25, ' ')}| {c.Tipo.PadLeft(12, ' ')}"
+        
+                )
+                .ToArray());
+            
+            txtClienteId.AutoCompleteCustomSource = source;
+            txtClienteId.AutoCompleteMode = AutoCompleteMode.Suggest;
+            txtClienteId.AutoCompleteSource = AutoCompleteSource.CustomSource;
+        }
+
+
+
+        private void txtClienteId_TextChanged(object sender, EventArgs e)
+        {
+            var campos = txtClienteId.Text.Split("|");
+            if (campos is null) return;
+
+            txtClienteId.Text = campos[0].Trim();
         }
     }
 }

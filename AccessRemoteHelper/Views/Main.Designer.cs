@@ -89,13 +89,17 @@
             // 
             // txtClienteId
             // 
+            txtClienteId.AutoCompleteMode = AutoCompleteMode.Suggest;
+            txtClienteId.AutoCompleteSource = AutoCompleteSource.CustomSource;
             txtClienteId.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
             txtClienteId.Location = new Point(12, 100);
             txtClienteId.MaxLength = 50;
             txtClienteId.Name = "txtClienteId";
+            txtClienteId.PlaceholderText = "Digite o ID do parceiro";
             txtClienteId.Size = new Size(246, 32);
             txtClienteId.TabIndex = 0;
             txtClienteId.TextAlign = HorizontalAlignment.Center;
+            txtClienteId.TextChanged += txtClienteId_TextChanged;
             // 
             // btnTeamViewer
             // 
@@ -297,6 +301,7 @@
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
             Controls.Add(label2);
+            Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             Icon = (Icon)resources.GetObject("$this.Icon");
             KeyPreview = true;
             MaximizeBox = false;
@@ -305,6 +310,7 @@
             Name = "Main";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Access Remote Helper";
+            Load += Main_Load;
             KeyDown += Main_KeyDown;
             Move += Form1_Move;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
