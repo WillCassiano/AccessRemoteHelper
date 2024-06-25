@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="AccessRemoteHelper.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="TeamViewer" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Program Files (x86)\TeamViewer\TeamViewer.exe</Value>
+    </Setting>
+    <Setting Name="Anydesk" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Program Files (x86)\AnyDesk\AnyDesk.exe</Value>
+    </Setting>
+    <Setting Name="Rdp" Type="System.String" Scope="User">
+      <Value Profile="(Default)">mstsc</Value>
+    </Setting>
+    <Setting Name="UltraViewer" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Program Files (x86)\UltraViewer\UltraViewer_Desktop.exe</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
