@@ -28,176 +28,170 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            components = new System.ComponentModel.Container();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Acessos));
-            this.dtGridAcessos = new System.Windows.Forms.DataGridView();
-            this.Data = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Contato = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.adicinonarContatoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.txtPesquisa = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.dtGridAcessos)).BeginInit();
-            this.contextMenuStrip1.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.SuspendLayout();
+            dtGridAcessos = new DataGridView();
+            contextMenuStrip1 = new ContextMenuStrip(components);
+            adicinonarContatoToolStripMenuItem = new ToolStripMenuItem();
+            panel1 = new Panel();
+            txtPesquisa = new TextBox();
+            panel2 = new Panel();
+            Data = new DataGridViewTextBoxColumn();
+            Contato = new DataGridViewTextBoxColumn();
+            Id = new DataGridViewTextBoxColumn();
+            Password = new DataGridViewTextBoxColumn();
+            Tipo = new DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)dtGridAcessos).BeginInit();
+            contextMenuStrip1.SuspendLayout();
+            panel1.SuspendLayout();
+            panel2.SuspendLayout();
+            SuspendLayout();
             // 
             // dtGridAcessos
             // 
-            this.dtGridAcessos.AllowUserToAddRows = false;
-            this.dtGridAcessos.AllowUserToDeleteRows = false;
-            this.dtGridAcessos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtGridAcessos.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dtGridAcessos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtGridAcessos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Data,
-            this.Contato,
-            this.Id,
-            this.Password,
-            this.Tipo});
-            this.dtGridAcessos.ContextMenuStrip = this.contextMenuStrip1;
-            this.dtGridAcessos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtGridAcessos.Location = new System.Drawing.Point(0, 0);
-            this.dtGridAcessos.MultiSelect = false;
-            this.dtGridAcessos.Name = "dtGridAcessos";
-            this.dtGridAcessos.ReadOnly = true;
-            this.dtGridAcessos.RowHeadersVisible = false;
-            this.dtGridAcessos.RowTemplate.Height = 25;
-            this.dtGridAcessos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtGridAcessos.Size = new System.Drawing.Size(603, 257);
-            this.dtGridAcessos.TabIndex = 0;
-            this.dtGridAcessos.DoubleClick += new System.EventHandler(this.dtGridAcessos_DoubleClick);
-            // 
-            // Data
-            // 
-            this.Data.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Data.DataPropertyName = "data";
-            dataGridViewCellStyle1.Format = "dd/MM/yyyy HH:mm:ss";
-            this.Data.DefaultCellStyle = dataGridViewCellStyle1;
-            this.Data.HeaderText = "Data";
-            this.Data.Name = "Data";
-            this.Data.ReadOnly = true;
-            this.Data.Width = 56;
-            // 
-            // Contato
-            // 
-            this.Contato.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Contato.DataPropertyName = "contato";
-            this.Contato.HeaderText = "Contato";
-            this.Contato.Name = "Contato";
-            this.Contato.ReadOnly = true;
-            // 
-            // Id
-            // 
-            this.Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Id.DataPropertyName = "id";
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Width = 42;
-            // 
-            // Password
-            // 
-            this.Password.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Password.DataPropertyName = "password";
-            this.Password.HeaderText = "Password";
-            this.Password.Name = "Password";
-            this.Password.ReadOnly = true;
-            this.Password.Width = 82;
-            // 
-            // Tipo
-            // 
-            this.Tipo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Tipo.DataPropertyName = "tipo";
-            this.Tipo.HeaderText = "Tipo";
-            this.Tipo.Name = "Tipo";
-            this.Tipo.ReadOnly = true;
-            this.Tipo.Width = 55;
+            dtGridAcessos.AllowUserToAddRows = false;
+            dtGridAcessos.AllowUserToDeleteRows = false;
+            dtGridAcessos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dtGridAcessos.BackgroundColor = SystemColors.ActiveCaption;
+            dtGridAcessos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dtGridAcessos.Columns.AddRange(new DataGridViewColumn[] { Data, Contato, Id, Password, Tipo });
+            dtGridAcessos.ContextMenuStrip = contextMenuStrip1;
+            dtGridAcessos.Dock = DockStyle.Fill;
+            dtGridAcessos.Location = new Point(0, 0);
+            dtGridAcessos.MultiSelect = false;
+            dtGridAcessos.Name = "dtGridAcessos";
+            dtGridAcessos.ReadOnly = true;
+            dtGridAcessos.RowHeadersVisible = false;
+            dtGridAcessos.RowTemplate.Height = 25;
+            dtGridAcessos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dtGridAcessos.Size = new Size(603, 257);
+            dtGridAcessos.TabIndex = 0;
+            dtGridAcessos.DoubleClick += dtGridAcessos_DoubleClick;
             // 
             // contextMenuStrip1
             // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.adicinonarContatoToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(170, 26);
+            contextMenuStrip1.Items.AddRange(new ToolStripItem[] { adicinonarContatoToolStripMenuItem });
+            contextMenuStrip1.Name = "contextMenuStrip1";
+            contextMenuStrip1.Size = new Size(170, 26);
             // 
             // adicinonarContatoToolStripMenuItem
             // 
-            this.adicinonarContatoToolStripMenuItem.Image = global::AccessRemoteHelper.Properties.Resources.star_line_yellow_icon;
-            this.adicinonarContatoToolStripMenuItem.Name = "adicinonarContatoToolStripMenuItem";
-            this.adicinonarContatoToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
-            this.adicinonarContatoToolStripMenuItem.Text = "Adicionar contato";
-            this.adicinonarContatoToolStripMenuItem.Click += new System.EventHandler(this.adicinonarContatoToolStripMenuItem_Click);
+            adicinonarContatoToolStripMenuItem.Image = Properties.Resources.star_line_yellow_icon;
+            adicinonarContatoToolStripMenuItem.Name = "adicinonarContatoToolStripMenuItem";
+            adicinonarContatoToolStripMenuItem.Size = new Size(169, 22);
+            adicinonarContatoToolStripMenuItem.Text = "Adicionar contato";
+            adicinonarContatoToolStripMenuItem.Click += adicinonarContatoToolStripMenuItem_Click;
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.txtPesquisa);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(603, 40);
-            this.panel1.TabIndex = 1;
+            panel1.Controls.Add(txtPesquisa);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(603, 40);
+            panel1.TabIndex = 1;
             // 
             // txtPesquisa
             // 
-            this.txtPesquisa.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtPesquisa.Location = new System.Drawing.Point(11, 6);
-            this.txtPesquisa.Name = "txtPesquisa";
-            this.txtPesquisa.Size = new System.Drawing.Size(579, 29);
-            this.txtPesquisa.TabIndex = 0;
-            this.txtPesquisa.TextChanged += new System.EventHandler(this.txtPesquisa_TextChanged);
-            this.txtPesquisa.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPesquisa_KeyDown);
+            txtPesquisa.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtPesquisa.Location = new Point(11, 6);
+            txtPesquisa.Name = "txtPesquisa";
+            txtPesquisa.Size = new Size(579, 29);
+            txtPesquisa.TabIndex = 0;
+            txtPesquisa.TextChanged += txtPesquisa_TextChanged;
+            txtPesquisa.KeyDown += txtPesquisa_KeyDown;
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.dtGridAcessos);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 40);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(603, 257);
-            this.panel2.TabIndex = 2;
+            panel2.Controls.Add(dtGridAcessos);
+            panel2.Dock = DockStyle.Fill;
+            panel2.Location = new Point(0, 40);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(603, 257);
+            panel2.TabIndex = 2;
+            // 
+            // Data
+            // 
+            Data.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            Data.DataPropertyName = "Data";
+            dataGridViewCellStyle1.Format = "G";
+            dataGridViewCellStyle1.NullValue = null;
+            Data.DefaultCellStyle = dataGridViewCellStyle1;
+            Data.HeaderText = "Data";
+            Data.Name = "Data";
+            Data.ReadOnly = true;
+            Data.Width = 56;
+            // 
+            // Contato
+            // 
+            Contato.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Contato.DataPropertyName = "contato";
+            Contato.HeaderText = "Contato";
+            Contato.Name = "Contato";
+            Contato.ReadOnly = true;
+            // 
+            // Id
+            // 
+            Id.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            Id.DataPropertyName = "id";
+            Id.HeaderText = "Id";
+            Id.Name = "Id";
+            Id.ReadOnly = true;
+            Id.Width = 42;
+            // 
+            // Password
+            // 
+            Password.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            Password.DataPropertyName = "password";
+            Password.HeaderText = "Password";
+            Password.Name = "Password";
+            Password.ReadOnly = true;
+            Password.Width = 82;
+            // 
+            // Tipo
+            // 
+            Tipo.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            Tipo.DataPropertyName = "tipo";
+            Tipo.HeaderText = "Tipo";
+            Tipo.Name = "Tipo";
+            Tipo.ReadOnly = true;
+            Tipo.Width = 55;
             // 
             // Acessos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(603, 297);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(619, 336);
-            this.Name = "Acessos";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Acessos";
-            this.Load += new System.EventHandler(this.Acessos_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dtGridAcessos)).EndInit();
-            this.contextMenuStrip1.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
+            ClientSize = new Size(603, 297);
+            Controls.Add(panel2);
+            Controls.Add(panel1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            MinimumSize = new Size(619, 336);
+            Name = "Acessos";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Acessos";
+            Load += Acessos_Load;
+            ((System.ComponentModel.ISupportInitialize)dtGridAcessos).EndInit();
+            contextMenuStrip1.ResumeLayout(false);
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            panel2.ResumeLayout(false);
+            ResumeLayout(false);
         }
 
         #endregion
 
         private DataGridView dtGridAcessos;
-        private DataGridViewTextBoxColumn Data;
-        private DataGridViewTextBoxColumn Contato;
-        private DataGridViewTextBoxColumn Id;
-        private DataGridViewTextBoxColumn Password;
-        private DataGridViewTextBoxColumn Tipo;
         private ContextMenuStrip contextMenuStrip1;
         private ToolStripMenuItem adicinonarContatoToolStripMenuItem;
         private Panel panel1;
         private TextBox txtPesquisa;
         private Panel panel2;
+        private DataGridViewTextBoxColumn Data;
+        private DataGridViewTextBoxColumn Contato;
+        private DataGridViewTextBoxColumn Id;
+        private DataGridViewTextBoxColumn Password;
+        private DataGridViewTextBoxColumn Tipo;
     }
 }

@@ -76,6 +76,15 @@ namespace AccessRemoteHelper.Data
                 command.CommandText = "SELECT AC.DATA, CT.CONTATO, AC.ID, AC.PASSWORD, AC.TIPO FROM ACESSOS AC LEFT JOIN CONTATOS CT ON AC.ID = CT.ID ORDER BY AC.DATA DESC";
 
                 var dt = new DataTable();
+
+                var columnDate = new DataColumn("Data");
+                columnDate.DataType = typeof(DateTime);
+
+                dt.Columns.Add(columnDate);
+                dt.Columns.Add("Contato");
+                dt.Columns.Add("Id");
+                dt.Columns.Add("Password");
+                dt.Columns.Add("Tipo");
                 dt.Load(command.ExecuteReader());
 
                 connection.Close();
