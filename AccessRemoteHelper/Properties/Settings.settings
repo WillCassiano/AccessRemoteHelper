@@ -14,5 +14,8 @@
     <Setting Name="UltraViewer" Type="System.String" Scope="User">
       <Value Profile="(Default)">C:\Program Files (x86)\UltraViewer\UltraViewer_Desktop.exe</Value>
     </Setting>
+    <Setting Name="RustDesk" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Program Files\rustdesk\rustdesk.exe</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

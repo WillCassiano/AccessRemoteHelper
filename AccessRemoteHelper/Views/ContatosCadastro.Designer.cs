@@ -29,127 +29,124 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ContatosCadastro));
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtContato = new System.Windows.Forms.TextBox();
-            this.txtId = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cmbTipoAcesso = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnSalvar = new System.Windows.Forms.Button();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.SuspendLayout();
+            label1 = new Label();
+            txtContato = new TextBox();
+            txtId = new TextBox();
+            label2 = new Label();
+            cmbTipoAcesso = new ComboBox();
+            label3 = new Label();
+            btnSalvar = new Button();
+            txtPassword = new TextBox();
+            label4 = new Label();
+            SuspendLayout();
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Contato";
+            label1.AutoSize = true;
+            label1.Location = new Point(12, 9);
+            label1.Name = "label1";
+            label1.Size = new Size(50, 15);
+            label1.TabIndex = 0;
+            label1.Text = "Contato";
             // 
             // txtContato
             // 
-            this.txtContato.Location = new System.Drawing.Point(12, 27);
-            this.txtContato.MaxLength = 50;
-            this.txtContato.Name = "txtContato";
-            this.txtContato.Size = new System.Drawing.Size(229, 23);
-            this.txtContato.TabIndex = 0;
+            txtContato.Location = new Point(12, 27);
+            txtContato.MaxLength = 50;
+            txtContato.Name = "txtContato";
+            txtContato.Size = new Size(229, 23);
+            txtContato.TabIndex = 0;
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(12, 74);
-            this.txtId.MaxLength = 50;
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(229, 23);
-            this.txtId.TabIndex = 1;
+            txtId.Location = new Point(12, 74);
+            txtId.MaxLength = 50;
+            txtId.Name = "txtId";
+            txtId.Size = new Size(229, 23);
+            txtId.TabIndex = 1;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 56);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 15);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "ID do cliente";
+            label2.AutoSize = true;
+            label2.Location = new Point(12, 56);
+            label2.Name = "label2";
+            label2.Size = new Size(73, 15);
+            label2.TabIndex = 2;
+            label2.Text = "ID do cliente";
             // 
             // cmbTipoAcesso
             // 
-            this.cmbTipoAcesso.FormattingEnabled = true;
-            this.cmbTipoAcesso.Items.AddRange(new object[] {
-            "Anydesk",
-            "TeamViewer",
-            "Rdp"});
-            this.cmbTipoAcesso.Location = new System.Drawing.Point(12, 167);
-            this.cmbTipoAcesso.Name = "cmbTipoAcesso";
-            this.cmbTipoAcesso.Size = new System.Drawing.Size(129, 23);
-            this.cmbTipoAcesso.TabIndex = 3;
-            this.cmbTipoAcesso.Text = "Anydesk";
+            cmbTipoAcesso.FormattingEnabled = true;
+            cmbTipoAcesso.Items.AddRange(new object[] { "Anydesk", "TeamViewer", "Rdp", "RustDesk" });
+            cmbTipoAcesso.Location = new Point(12, 167);
+            cmbTipoAcesso.Name = "cmbTipoAcesso";
+            cmbTipoAcesso.Size = new Size(129, 23);
+            cmbTipoAcesso.TabIndex = 3;
+            cmbTipoAcesso.Text = "Anydesk";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 149);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 15);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "ID do cliente";
+            label3.AutoSize = true;
+            label3.Location = new Point(12, 149);
+            label3.Name = "label3";
+            label3.Size = new Size(73, 15);
+            label3.TabIndex = 5;
+            label3.Text = "ID do cliente";
             // 
             // btnSalvar
             // 
-            this.btnSalvar.BackColor = System.Drawing.Color.IndianRed;
-            this.btnSalvar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalvar.Font = new System.Drawing.Font("Cascadia Code", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSalvar.Location = new System.Drawing.Point(147, 152);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(94, 41);
-            this.btnSalvar.TabIndex = 4;
-            this.btnSalvar.Text = "Salvar";
-            this.btnSalvar.UseVisualStyleBackColor = false;
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            btnSalvar.BackColor = Color.IndianRed;
+            btnSalvar.BackgroundImageLayout = ImageLayout.Zoom;
+            btnSalvar.FlatStyle = FlatStyle.Flat;
+            btnSalvar.Font = new Font("Cascadia Code", 9F, FontStyle.Bold);
+            btnSalvar.Location = new Point(147, 152);
+            btnSalvar.Name = "btnSalvar";
+            btnSalvar.Size = new Size(94, 41);
+            btnSalvar.TabIndex = 4;
+            btnSalvar.Text = "Salvar";
+            btnSalvar.UseVisualStyleBackColor = false;
+            btnSalvar.Click += btnSalvar_Click;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(12, 123);
-            this.txtPassword.MaxLength = 50;
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(229, 23);
-            this.txtPassword.TabIndex = 2;
+            txtPassword.Location = new Point(12, 123);
+            txtPassword.MaxLength = 50;
+            txtPassword.Name = "txtPassword";
+            txtPassword.Size = new Size(229, 23);
+            txtPassword.TabIndex = 2;
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 105);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 15);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Password";
+            label4.AutoSize = true;
+            label4.Location = new Point(12, 105);
+            label4.Name = "label4";
+            label4.Size = new Size(57, 15);
+            label4.TabIndex = 7;
+            label4.Text = "Password";
             // 
             // ContatosCadastro
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(253, 205);
-            this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.btnSalvar);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.cmbTipoAcesso);
-            this.Controls.Add(this.txtId);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtContato);
-            this.Controls.Add(this.label1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(269, 194);
-            this.Name = "ContatosCadastro";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Contato";
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(253, 205);
+            Controls.Add(txtPassword);
+            Controls.Add(label4);
+            Controls.Add(btnSalvar);
+            Controls.Add(label3);
+            Controls.Add(cmbTipoAcesso);
+            Controls.Add(txtId);
+            Controls.Add(label2);
+            Controls.Add(txtContato);
+            Controls.Add(label1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
+            MinimizeBox = false;
+            MinimumSize = new Size(269, 194);
+            Name = "ContatosCadastro";
+            StartPosition = FormStartPosition.CenterParent;
+            Text = "Contato";
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 

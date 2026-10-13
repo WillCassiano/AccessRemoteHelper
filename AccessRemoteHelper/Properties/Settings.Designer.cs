@@ -70,5 +70,17 @@ namespace AccessRemoteHelper.Properties {
                 this["UltraViewer"] = value;
             }
         }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Program Files\\rustdesk\\rustdesk.exe")]
+        public string RustDesk {
+            get {
+                return ((string)(this["RustDesk"]));
+            }
+            set {
+                this["RustDesk"] = value;
+            }
+        }
     }
 }

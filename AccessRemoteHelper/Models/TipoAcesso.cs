@@ -11,6 +11,7 @@ namespace AccessRemoteHelper.Models
         TeamViewer,
         Anydesk,
         Rdp,
-        UltraViewer
+        UltraViewer,
+        RustDesk
     }
 }

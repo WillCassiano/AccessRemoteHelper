@@ -86,7 +86,8 @@ namespace AccessRemoteHelper
             {
                 OpenWithReaderText = !OpenWithReaderText;
                 lblModoLeitura.Visible = OpenWithReaderText;
-            };
+            }
+            ;
 
         }
 
@@ -107,16 +108,16 @@ namespace AccessRemoteHelper
             var source = new AutoCompleteStringCollection();
             source.AddRange(_applicationDb.ListarAcessos()
                 .AsEnumerable()
-                .Select(x => new { Id = x["Id"].ToString(), Tipo = x["Tipo"].ToString(), DataHora = Convert.ToDateTime(x["Data"]) })                
-                .GroupBy(c => (c.Id, c.Tipo))      
+                .Select(x => new { Id = x["Id"].ToString(), Tipo = x["Tipo"].ToString(), DataHora = Convert.ToDateTime(x["Data"]) })
+                .GroupBy(c => (c.Id, c.Tipo))
                 .Select(x => new { x.Key.Id, x.Key.Tipo, Tempo = DateTime.Now - x.Max(g => g.DataHora) })
                 .OrderBy(x => x.Tempo)
                 .Select(c =>
                     $"{c.Id.PadRight(25, ' ')}| {c.Tipo.PadLeft(12, ' ')}"
-        
+
                 )
                 .ToArray());
-            
+
             txtClienteId.AutoCompleteCustomSource = source;
             txtClienteId.AutoCompleteMode = AutoCompleteMode.Suggest;
             txtClienteId.AutoCompleteSource = AutoCompleteSource.CustomSource;
@@ -130,6 +131,11 @@ namespace AccessRemoteHelper
             if (campos is null) return;
 
             txtClienteId.Text = campos[0].Trim();
+        }
+
+        private void btnRustDesk_Click(object sender, EventArgs e)
+        {
+            _aplicativoRemoto.Conectar(txtClienteId.Text, txtPassword.Text, TipoAcesso.RustDesk);
         }
     }
 }
